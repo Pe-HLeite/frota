@@ -1,17 +1,30 @@
 <script setup>
-    import Button from "primevue/button"
-    import Card from 'primevue/card';
+import Card from 'primevue/card';
 </script>
-<template>
-    Hello word!!!!!
-    <Button label="Submit" />
-    <Card>
-    <template #title>Simple Card</template>
-    <template #content>
-        <p class="m-0">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
-            quas!
-        </p>
-    </template>
-</Card>
+
+<template style="height: 100%;">
+    <div class="card">
+        <Card class="card-center">
+            <template #header>
+            </template>
+            <template #content>
+            </template>
+        </Card>
+    </div>
 </template>
+
+<style>
+    .card {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-center {
+        background-color: rgb(22, 16, 21) !important;
+        width: 40%;
+    }
+    #app {
+        height: 100%;
+    }
+</style>    

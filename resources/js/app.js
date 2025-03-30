@@ -14,7 +14,11 @@ createInertiaApp({
       .use(plugin)
       .use(PrimeVue, {
         theme: {
-            preset: Aura
+          preset: Aura,
+          options: {
+            prefix: 'p',
+            darkModeSelector: false || 'none'
+          }
         }
       })
       .mount(el)

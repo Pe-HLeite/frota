@@ -1,19 +1,24 @@
 <script setup>
 import {
     Card,
-    Password
+    InputText,
+    Password,
 } from 'primevue';
 </script>
 
 <template style="height: 100%;">
     <div class="card">
         <Card class="card-center">
-            <template #header class="">
-                Aqui vem o titulo do card
+            <template #header class="flex justify-center">
+                <p class="text-center text-xl font-bold ">
+                    Login
+                </p>
             </template>
-            <template #content class="flex text-3xl font-bold underline">
-                Corpo do card Prime-Vue
-                <Password v-model="value" toggleMask />
+            <template #content class="flex flex justify-center ">
+                <div class="informacoes-login gap-2">
+                    <InputText type="text" v-model="value" />
+                    <Password v-model="value" toggleMask />
+                </div>
             </template>
         </Card>
     </div>

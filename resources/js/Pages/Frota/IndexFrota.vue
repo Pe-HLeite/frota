@@ -7,11 +7,11 @@ import {
 
 <template style="height: 100%;">
     <div class="card">
-        <Card class="card-center p-4 ">
-            <template #header class="p-5">
+        <Card class="card-center">
+            <template #header class="">
                 Aqui vem o titulo do card
             </template>
-            <template #content>
+            <template #content class="flex text-3xl font-bold underline">
                 Corpo do card Prime-Vue
                 <Password v-model="value" toggleMask />
             </template>

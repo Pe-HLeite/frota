@@ -15,7 +15,7 @@ import {
                 </p>
             </template>
             <template #content class="flex flex justify-center ">
-                <div class="informacoes-login gap-2">
+                <div class="flex flex-col align-center gap-2">
                     <InputText type="text" v-model="value" />
                     <Password v-model="value" toggleMask />
                 </div>

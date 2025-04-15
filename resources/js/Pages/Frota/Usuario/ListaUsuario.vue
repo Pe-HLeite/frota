@@ -1,6 +1,10 @@
 <template>
     Dentro do template de listagem de usuarios
-    <div class="w-3/5 ">
+    <div class="w-full bg-red-50 flex justify-center">
+        Parte de usuarios
+        <Button type="button" label="Criar novo cadasstro" />
+    </div>
+    <!-- <div class="w-3/5 ">
         <DataTable 
         >
             <Column 
@@ -21,12 +25,14 @@
             />
     
         </DataTable>
-    </div>
+    </div> -->
 </template>
 
 <script setup>
     import {
         DataTable,
-        Column
+        Column, 
+        Button,
+
     } from 'primevue'
 </script>

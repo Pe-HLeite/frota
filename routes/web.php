@@ -12,5 +12,5 @@ Route::get('/', function () {
 Route::get('/index_frota', [FrotaController::class, 'index']);
 Route::resource('usuario', UsuarioController::class);
 
-
+Route::get('/testandoGrafico', [FrotaController::class, 'index_grafico']);
 require __DIR__.'/auth.php';

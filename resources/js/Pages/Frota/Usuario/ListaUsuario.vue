@@ -1,38 +1,43 @@
 <template>
-    Dentro do template de listagem de usuarios
-    <div class="w-full bg-red-50 flex justify-center">
-        Parte de usuarios
-        <Button type="button" label="Criar novo cadasstro" />
-    </div>
-    <!-- <div class="w-3/5 ">
-        <DataTable 
-        >
-            <Column 
-                field="nome"
-                header="Nome"
-            />
-            <Column 
-                field="cargo"
-                header="Cargo"
-            />
-            <Column 
-                field="secretaria_id"
-                header="Secretaria vinculado(a)"
-            />
-            <Column 
-                field="created_at"
-                header="Data de cadastro"
-            />
-    
-        </DataTable>
-    </div> -->
+    <Card class="py-12">
+        <template #content>
+            <div class="w-full">
+                <Form>
+                    <div class="w-full flex flex-col gap-2">
+                        <FloatLabel variant="on" >
+                            <InputText id="nomeUsuario" type="text" />
+                            <label for="nomeUsuario">Nome usuário:</label>
+                        </FloatLabel>
+
+                        <FloatLabel variant="on">
+                            <InputText id="emailUsuario" type="email" />
+                            <label for="emailUsuario">E-mail usuário:</label>
+                        </FloatLabel>
+
+                        <FloatLabel variant="on">
+                            <Password id="senhaUsuario" type="password" toggleMask  />
+                            <label for="senhaUsuario">Senha usuário:</label>
+                        </FloatLabel>
+                    </div>
+                </Form>
+            </div>
+        </template>
+    </Card>
 </template>
 
 <script setup>
-    import {
-        DataTable,
-        Column, 
-        Button,
+import {
+    Card,
+    Button,
+    Dialog,
+    InputText,
+    FloatLabel,
+    Password 
+} from 'primevue'
 
-    } from 'primevue'
+import { ref } from 'vue';
+
+const visible = ref(false);
+
+import { Form } from '@primevue/forms';
 </script>
